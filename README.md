@@ -54,7 +54,7 @@ mech-to-robotics-lab/
 │   └── personal-route.js   # 个人路线编辑器
 ├── scripts/serve.mjs        # 无依赖的本地静态服务
 ├── docs/                   # 资源清单、架构与发布说明
-├── .github/                # Issue 模板、可手动运行的 Pages 发布流程
+├── .github/                # Issue 模板、自动及手动 Pages 发布流程
 ├── package.json
 ├── CONTRIBUTING.md
 ├── SECURITY.md
@@ -86,7 +86,7 @@ mech-to-robotics-lab/
 - [贡献指南](CONTRIBUTING.md)
 - [版本记录](CHANGELOG.md)
 
-已附 GitHub Pages **手动发布**工作流。上传仓库后，在 `Settings → Pages → Source` 选择 `GitHub Actions`，再到 `Actions → Deploy static site to GitHub Pages → Run workflow` 发布。工作流不包含测试或构建步骤。[GitHub 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+已附 GitHub Pages **自动发布**工作流。首次部署前，在 `Settings → Pages → Source` 选择 `GitHub Actions`。之后向 `main` 推送 `web/` 或 Pages 工作流的变更会自动部署；也可以到 `Actions → Deploy static site to GitHub Pages → Run workflow` 手动发布。工作流不包含测试或构建步骤。[GitHub 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 
 ## 资源与路线依据
 
