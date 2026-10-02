@@ -40,14 +40,14 @@ git push -u origin main
 
 ## GitHub Pages
 
-网站源文件全部在 `web/`，不需要构建。已有工作流只通过手动运行发布，不会因提交说明文件而自动公开网站。
+网站源文件全部在 `web/`，不需要构建。已有工作流在 `main` 分支收到 `web/` 或 Pages 工作流的变更后自动发布，也支持手动发布。只修改说明文件不会触发自动部署。首次部署前须在仓库设置中启用 GitHub Pages。
 
 1. 上传源码至仓库默认分支。
 2. 在仓库 `Settings → Pages`，将 `Source` 设为 `GitHub Actions`。
 3. 打开 `Actions → Deploy static site to GitHub Pages`，点击 `Run workflow`。
 4. 以该次 workflow 的部署结果为准，成功后从 `github-pages` 环境或 Pages 设置取得网址。
 
-配置包含 checkout、configure-pages、upload-pages-artifact 和 deploy-pages；只上传 `web/`。可按实际需要另行加入 push 触发器。[GitHub 官方工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+配置包含 checkout、configure-pages、upload-pages-artifact 和 deploy-pages；只上传 `web/`。已配置 push 触发器，并保留 workflow_dispatch 手动入口。[GitHub 官方工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 
 项目使用相对资源路径与 hash 路由，不需要设置项目子路径，也不需要服务器路由重写。
 
@@ -63,4 +63,4 @@ git push -u origin main
 
 ## 更新项目
 
-修改 `web/`，提交并推送后重新运行 Pages 工作流。课程 ID、知识任务索引、localStorage 键和个人路线 ID 关系涉及旧数据兼容，修改前阅读 [架构说明](architecture.md)。
+修改 `web/` 并推送至 `main` 后会自动运行 Pages 工作流；也可手动重新发布。课程 ID、知识任务索引、localStorage 键和个人路线 ID 关系涉及旧数据兼容，修改前阅读 [架构说明](architecture.md)。
