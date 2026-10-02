@@ -1,5 +1,7 @@
 # 机研学社 · Mech to Robotics Lab
 
+[在线使用](https://waters-space.github.io/mech-to-robotics-lab/) · [源码仓库](https://github.com/Waters-space/mech-to-robotics-lab)
+
 面向机械工程学生的机器人学习工作台：用中文视频学习基础课程，用实践任务记录进度，用可连线的个人路线记录自己的成长顺序。
 
 纯 HTML、CSS 和 JavaScript，无运行依赖、无账号系统、无后端。可以本地运行，也可以部署到 GitHub Pages 或其他静态托管服务。
